@@ -1,0 +1,10 @@
+{
+    "PluginName": "网易云音乐插件",
+    "DependentLibraries": null,
+    "IsLibraries": false,
+    "PluginIcon": null,
+    "PluginAuthor": "AEBC08",
+    "MainPyName": "NCMPlugin",
+    "PluginDescription": "一个网易云音乐搜歌与点歌的插件",
+    "EnablePlugin": true
+}
