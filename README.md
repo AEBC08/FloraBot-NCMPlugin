@@ -1,9 +1,9 @@
 # FloraBot-NCMPlugin
 **FloraBot 的一个网易云音乐搜歌与点歌的插件**
 ## 安装插件
-**通过此链接下载: [`https://github.com/AEBC08/FloraBot-NCMPlugin/archive/main.zip`](https://github.com/AEBC08/FloraBot-NCMPlugin/archive/main.zip)**
-**然后解压到 FloraBot安装目录/FloraBot/Plugin**
-**向 Bot 发送 `/重载插件` 指令即可安装完毕**
+**通过此链接下载: [`https://github.com/AEBC08/FloraBot-NCMPlugin/archive/main.zip`](https://github.com/AEBC08/FloraBot-NCMPlugin/archive/main.zip)**  
+**然后解压到 FloraBot安装目录/FloraBot/Plugin**  
+**若 Bot  正在运行, 向 Bot 发送 `/重载插件` 指令即可安装完毕**
 ## 食用插件
 **向 Bot 发送如下指令:**  
 **/搜歌 + [空格] + [内容] + (可选参数)  
