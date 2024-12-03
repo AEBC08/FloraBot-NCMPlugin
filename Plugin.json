@@ -6,5 +6,21 @@
     "PluginAuthor": "AEBC08",
     "MainPyName": "NCMPlugin",
     "PluginDescription": "一个网易云音乐搜歌与点歌的插件",
-    "EnablePlugin": true
+    "EnablePlugin": true,
+
+    "Help": [
+        {
+            "Class": "网易云音乐",
+            "Commands": [
+                {
+                    "Command": "/搜歌 + [空格] + [内容] + (可选参数){可选参数: [空格] + 数量 + [1 <= 数字 <= 30]; [空格] + 偏移 + [0 <= 数字 <= 30]}",
+                    "Content": "使用网易云音乐的 API 搜歌"
+                },
+                {
+                    "Command": "/点歌 + [空格] + [序号]",
+                    "Content": "搜完歌之后使用该指令点歌"
+                }
+            ]
+        }
+    ]
 }

@@ -49,29 +49,7 @@ def event(data: dict):  # 事件函数,FloraBot每收到一个事件都会调用
     msg = data.get("raw_message")
     if msg is not None:
         msg = msg.replace("&#91;", "[").replace("&#93;", "]").replace("&amp;", "&").replace("&#44;", ",")  # 消息需要将URL编码替换到正确内容
-        if msg.startswith("/一言"):
-            msg = msg.replace("/一言", "", 1)
-            text_data = {}
-            types_dict = {"动画": "a", "漫画": "b", "游戏": "c", "文学": "d", "原创": "e", "网络": "f", "其他": "g",  "影视": "h", "诗词": "i", "网易云": "j", "哲学": "k", "抖机灵": "l"}
-            send_text = ""
-            if msg != "":
-                if msg.startswith(" "):
-                    msg = msg.replace(" ", "", 1)
-                    if msg in types_dict:
-                        text_data.update({"c": types_dict.get(msg)})
-                    else:
-                        send_text = "参数不正确哦, 没有这个类型呢\n类型有这些:\n动画、漫画、游戏、文学、原创、网络、其他、影视、诗词、网易云、哲学、抖机灵"
-                else:
-                    send_text = "参数不正确哦, 正确的指令格式为:\n/一言 + [空格] + [类型]"
-            if send_text == "":
-                get_text = requests.get("https://v1.hitokoto.cn", params=text_data).json()
-                text_type = ""
-                for key, value in types_dict.items():
-                    if get_text.get("type") == value:
-                        text_type = key
-                send_text = f"一言:\n{get_text.get('hitokoto')}\n\n信息:\n一言类型: {text_type}\n出处: {get_text.get('from')}\n出自: {get_text.get('from_who')}"
-            send_msg(send_type, send_text, uid, gid, mid, ws_client, ws_server, send_host, send_port)
-        elif msg.startswith("/搜歌 "):
+        if msg.startswith("/搜歌 "):
             now_time = time.time()
             for key, value in search_result.items():
                 if now_time - value.get("SearchTime") > 60:
